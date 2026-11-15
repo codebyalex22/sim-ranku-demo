@@ -433,6 +433,101 @@ main:focus,
   display: none;
 }
 
+/* Перемикач мови UA / EN */
+.site-nav {
+  margin-left: auto;
+}
+
+.site-header .logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* На вузькому десктопі кнопка замовлення в шапці не вміщається поруч із перемикачем мови;
+   такі самі кнопки є на першому екрані та в блоці замовлень */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .site-nav__cta {
+    display: none;
+  }
+}
+
+.lang-switch {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+}
+
+.lang-switch a {
+  display: grid;
+  min-width: 38px;
+  min-height: 38px;
+  padding-inline: 8px;
+  color: var(--muted);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  place-items: center;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--primary-dark);
+}
+
+.lang-switch a[aria-current="page"] {
+  color: #fff;
+  background: var(--dark);
+}
+
+@media (max-width: 1023px) {
+  .site-header__inner {
+    gap: 12px;
+  }
+
+  .lang-switch {
+    margin-left: auto;
+  }
+}
+
+/* На вузьких екранах лишаємо в кнопці меню лише іконку; підпис доступний зчитувачам */
+@media (max-width: 419px) {
+  .js .menu-toggle {
+    padding-inline: 13px;
+  }
+
+  .js .menu-toggle__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 359px) {
+  .site-header__inner {
+    gap: 8px;
+  }
+
+  .site-header .logo {
+    font-size: 1.1rem;
+  }
+
+  .lang-switch a {
+    min-width: 32px;
+    padding-inline: 4px;
+  }
+}
+
 @media (max-width: 1023px) {
   .js .menu-toggle {
     position: relative;

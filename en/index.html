@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sim Ranku — Bakery &amp; Café (Demo Site)</title>
+    <meta
+      name="description"
+      content="Demo website for Sim Ranku, a fictional bakery-café: sourdough bread, pastries, coffee and custom cakes. A portfolio sample."
+    />
+    <!-- Demo site for a fictional business: kept out of search results so it can't mislead anyone -->
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Sim Ranku — Bakery &amp; Café (Demo Site)" />
+    <meta
+      property="og:description"
+      content="A one-page website sample for a bakery-café: menu, benefits and an order form."
+    />
+    <!-- Social networks only read absolute URLs; update both values if the site moves to another domain -->
+    <meta property="og:url" content="https://codebyalex22.github.io/sim-ranku-demo/en/" />
+    <meta property="og:image" content="https://codebyalex22.github.io/sim-ranku-demo/images/og-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cappuccino with latte art and croissants on a wooden table" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="uk" href="https://codebyalex22.github.io/sim-ranku-demo/" />
+    <link rel="alternate" hreflang="en" href="https://codebyalex22.github.io/sim-ranku-demo/en/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238c4220'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3E7%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="../images/hero-coffee-croissants-1280.webp"
+      imagesrcset="../images/hero-coffee-croissants-720.webp 720w, ../images/hero-coffee-croissants-1280.webp 1280w"
+      imagesizes="(min-width: 1024px) min(40vw, 504px), calc(100vw - 40px)"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+      // Reveal animations switch on only if script.js actually runs.
+      // If it fails to load or crashes, all content is shown without animation after 2 s.
+      document.documentElement.classList.add("js");
+      window.setTimeout(function () {
+        if (!document.documentElement.hasAttribute("data-ready")) {
+          document.documentElement.classList.remove("js");
+        }
+      }, 2000);
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <p class="demo-bar">
+      <strong>Portfolio demo site.</strong>
+      Sim Ranku bakery, its prices, reviews and contact details are fictional.
+    </p>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#top" aria-label="Sim Ranku — back to top">
+          <span class="logo__mark" aria-hidden="true">7</span>
+          <span class="logo__text">Sim Ranku</span>
+        </a>
+
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <ul class="site-nav__list">
+            <li><a href="#menu">Our Bakes</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#about">How We Bake</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contacts">Contact</a></li>
+          </ul>
+          <a class="button button--primary site-nav__cta" href="#order">Order Now</a>
+          <p class="site-nav__meta">Open daily 7am–8pm · 7 Example Street</p>
+        </nav>
+
+        <nav class="lang-switch" aria-label="Site language">
+          <a href="../" lang="uk" hreflang="uk"><span aria-hidden="true">UA</span><span class="sr-only">Українська</span></a>
+          <a href="./" lang="en" hreflang="en" aria-current="page"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow hero__eyebrow" data-intro>Bakery &amp; café · daily from&nbsp;7am</p>
+            <h1 id="hero-title" data-intro style="--delay: 80ms">
+              Sourdough and coffee, <em>still warm</em> at&nbsp;seven in the&nbsp;morning
+            </h1>
+            <p class="hero__lead" data-intro style="--delay: 160ms">
+              We bake in small batches with flour from Ukrainian mills — no margarine, no additives.
+              Drop in for breakfast, or order a cake or a pastry box 24 hours ahead.
+            </p>
+            <div class="hero__actions" data-intro style="--delay: 240ms">
+              <a class="button button--primary button--large" href="#order">
+                Place an Order
+                <span class="button__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="button button--ghost button--large" href="#menu">See What We Bake</a>
+            </div>
+            <ul class="hero__points" data-intro style="--delay: 320ms">
+              <li><strong>24 h</strong> dough fermentation</li>
+              <li><strong>0 g</strong> margarine</li>
+              <li><strong>24 h</strong> notice for cakes</li>
+            </ul>
+          </div>
+
+          <div class="hero__media" data-intro="fade" style="--delay: 120ms">
+            <img
+              class="hero__image"
+              src="../images/hero-coffee-croissants-1280.webp"
+              srcset="../images/hero-coffee-croissants-720.webp 720w, ../images/hero-coffee-croissants-1280.webp 1280w"
+              sizes="(min-width: 1024px) min(40vw, 504px), calc(100vw - 40px)"
+              width="1280"
+              height="1530"
+              alt="Cappuccino with latte art next to croissants and a chocolate pastry"
+              fetchpriority="high"
+            />
+            <div class="hero__badge">
+              <span class="hero__badge-dot" aria-hidden="true"></span>
+              <span>
+                <strong>Fresh from the oven</strong>
+                wheat sourdough, croissants, cinnamon rolls
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="section__header section__header--split">
+            <div>
+              <p class="eyebrow">Our bakes</p>
+              <h2 id="menu-title">On the counter every morning</h2>
+            </div>
+            <p class="section__lead">
+              Six favorites our regulars keep coming back for. Prices are for illustration only.
+            </p>
+          </div>
+
+          <ul class="products">
+            <li class="product" data-reveal>
+              <div class="product__media">
+                <img src="../images/sourdough-loaf.webp" width="800" height="600" loading="lazy" decoding="async" alt="Round sourdough loaf with a crackly crust on a wooden board" />
+                <span class="product__tag">Bestseller</span>
+              </div>
+              <div class="product__body">
+                <h3>Wheat Sourdough</h3>
+                <p>Crisp crust, soft open crumb and a gentle tang.</p>
+                <p class="product__meta"><span>750 g</span><span class="price">85 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 80ms">
+              <div class="product__media">
+                <img src="../images/croissants.webp" width="800" height="600" loading="lazy" decoding="async" alt="Two flaky croissants on a dark plate" />
+              </div>
+              <div class="product__body">
+                <h3>All-Butter Croissant</h3>
+                <p>27 layers, 82% butter. Best before 10am, while it's still warm.</p>
+                <p class="product__meta"><span>90 g</span><span class="price">65 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 160ms">
+              <div class="product__media">
+                <img src="../images/cinnamon-rolls.webp" width="800" height="600" loading="lazy" decoding="async" alt="Three cinnamon rolls, one topped with cream glaze" />
+                <span class="product__tag">New</span>
+              </div>
+              <div class="product__body">
+                <h3>Cinnamon Roll</h3>
+                <p>Brioche dough and Ceylon cinnamon, with or without cream glaze.</p>
+                <p class="product__meta"><span>130 g</span><span class="price">75 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal>
+              <div class="product__media">
+                <img src="../images/rye-bread-sliced.webp" width="800" height="600" loading="lazy" decoding="async" alt="Sliced country loaf with a light, airy crumb on a wooden board" />
+              </div>
+              <div class="product__body">
+                <h3>Country Wheat &amp; Rye</h3>
+                <p>A light, airy crumb with 15% rye flour. Stays fresh for up to three days.</p>
+                <p class="product__meta"><span>700 g</span><span class="price">90 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 80ms">
+              <div class="product__media">
+                <img src="../images/baguettes.webp" width="800" height="600" loading="lazy" decoding="async" alt="Two golden, flour-dusted baguettes on a wooden board" />
+              </div>
+              <div class="product__body">
+                <h3>Classic Baguette</h3>
+                <p>A long, cold ferment for deep flavor and a thin, crisp crust.</p>
+                <p class="product__meta"><span>250 g</span><span class="price">45 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 160ms">
+              <div class="product__media">
+                <img src="../images/cappuccino.webp" width="800" height="600" loading="lazy" decoding="async" alt="Cappuccino with latte art in a white cup on a dark table" />
+              </div>
+              <div class="product__body">
+                <h3>Cappuccino</h3>
+                <p>Medium-roast specialty espresso with 3.2% milk.</p>
+                <p class="product__meta"><span>250 ml</span><span class="price">65 ₴</span></p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="menu-extra" data-reveal>
+            <h3>Also every day</h3>
+            <ul class="menu-extra__list">
+              <li><span>Espresso</span><span class="price">45 ₴</span></li>
+              <li><span>Filter coffee of the day</span><span class="price">60 ₴</span></li>
+              <li><span>Flat white</span><span class="price">70 ₴</span></li>
+              <li><span>Pie of the day, per slice</span><span class="price">80 ₴</span></li>
+              <li><span>Almond croissant</span><span class="price">85 ₴</span></li>
+              <li><span>Ciabatta</span><span class="price">50 ₴</span></li>
+            </ul>
+          </div>
+
+          <div class="order-strip" data-reveal>
+            <div>
+              <h3>Custom cakes &amp; catering</h3>
+              <p>Cakes from 1.5 kg, pastry boxes for coffee breaks and celebrations. Local delivery available.</p>
+            </div>
+            <a class="button button--light" href="#order">
+              Discuss Your Order
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section section--alt" aria-labelledby="why-title">
+        <div class="container why">
+          <figure class="why__media" data-reveal="fade">
+            <img src="../images/barista-latte-art.webp" width="700" height="875" loading="lazy" decoding="async" alt="Barista pouring milk into a cup to create latte art" />
+          </figure>
+          <div>
+            <div class="section__header">
+              <p class="eyebrow">Why us</p>
+              <h2 id="why-title">Three rules we stick to every day</h2>
+            </div>
+            <ol class="benefits">
+              <li class="benefit" data-reveal>
+                <h3>Dough rests for 24 hours</h3>
+                <p>A long ferment with a live sourdough starter makes bread more flavorful and easier to digest.</p>
+              </li>
+              <li class="benefit" data-reveal style="--delay: 80ms">
+                <h3>Only natural ingredients</h3>
+                <p>82% butter, flour from family-run mills and seasonal berries. Ask at the counter for full ingredients.</p>
+              </li>
+              <li class="benefit" data-reveal style="--delay: 160ms">
+                <h3>Ordering made simple</h3>
+                <p>Send a request — we'll confirm the details by messenger and have it ready when you need it.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container about">
+          <div class="about__text">
+            <p class="eyebrow">How we bake</p>
+            <h2 id="about-title">While the city sleeps, our oven is already hot</h2>
+            <p>
+              A small bakery where every loaf is shaped by hand and the counter is restocked several
+              times a day. We bake in small batches, so you get fresh bread — never yesterday's
+              leftovers.
+            </p>
+            <ol class="timeline">
+              <li><time>22:00</time><span>We mix the sourdough</span></li>
+              <li><time>04:00</time><span>We shape the loaves and croissants</span></li>
+              <li><time>06:30</time><span>The first batch comes out of the oven</span></li>
+              <li><time>07:00</time><span>Doors open and the coffee is on</span></li>
+            </ol>
+          </div>
+          <figure class="about__media" data-reveal="fade">
+            <img src="../images/bakery-shelves.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Shelves of wicker baskets filled with fresh bread and buns" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="reviews" class="section section--alt" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section__header section__header--split">
+            <div>
+              <p class="eyebrow">Reviews</p>
+              <h2 id="reviews-title">What our guests say</h2>
+            </div>
+            <p class="section__lead demo-note">
+              <span class="demo-label">Demo</span>
+              Sample reviews for this mockup. Replace them with real reviews, with the authors' permission.
+            </p>
+          </div>
+
+          <div class="reviews">
+            <figure class="review review--featured" data-reveal>
+              <blockquote>
+                <p>“The country loaf is still fresh on day three. Now we pick one up every week.”</p>
+              </blockquote>
+              <figcaption>Sample review · regular guest</figcaption>
+            </figure>
+            <figure class="review" data-reveal style="--delay: 80ms">
+              <blockquote>
+                <p>“We ordered a pastry box for our team's coffee break, and everything arrived on time.”</p>
+              </blockquote>
+              <figcaption>Sample review · corporate order</figcaption>
+            </figure>
+            <figure class="review" data-reveal style="--delay: 160ms">
+              <blockquote>
+                <p>“Flaky croissants and a smooth cappuccino. The perfect breakfast on the way to work.”</p>
+              </blockquote>
+              <figcaption>Sample review · café guest</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section" aria-labelledby="contacts-title">
+        <div class="container contact">
+          <div class="contact__details">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contacts-title">Order a cake or pastries in advance</h2>
+            <p>
+              Send a request and we'll get back to you within one business day. For urgent orders,
+              please call.
+            </p>
+            <p class="demo-note">
+              <span class="demo-label">Demo</span>
+              The contact details below are placeholders and don't belong to a real business.
+            </p>
+            <dl class="contact-list">
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:+380000000000">+380 00 000 00 00</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>7 Example Street</dd>
+              </div>
+              <div>
+                <dt>Opening hours</dt>
+                <dd>Daily 7am–8pm</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div id="order" class="form-panel" tabindex="-1" data-reveal>
+            <h3 id="form-title">Order request</h3>
+            <p class="form-panel__hint">All fields are required.</p>
+            <p class="demo-note form-panel__demo">
+              <span class="demo-label">Demo</span>
+              This form only checks your input. Real sending isn't connected, and no data is transmitted.
+            </p>
+
+            <!--
+              data-endpoint: URL of the server-side form handler (POST, JSON).
+              While it is empty, the form runs in demo mode and sends nothing.
+              Fields are disabled in HTML and enabled by script.js, so without JavaScript
+              the form can't be submitted (and no data ends up in the page URL).
+            -->
+            <form
+              id="contact-form"
+              class="contact-form"
+              aria-labelledby="form-title"
+              method="post"
+              action="#order"
+              data-endpoint=""
+              novalidate
+            >
+              <noscript>
+                <p class="form-status form-status--info">
+                  This is a demo site, so no real requests are sent. Without JavaScript the form is disabled; with it, the form only checks the fields.
+                </p>
+              </noscript>
+              <fieldset class="contact-form__fields" disabled>
+                <legend class="sr-only">Order details</legend>
+              <div class="field">
+                <label for="name">Your name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="60"
+                  required
+                  aria-describedby="name-error"
+                />
+                <p id="name-error" class="field__error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="contact">Phone or email</label>
+                <p id="contact-hint" class="field__hint">
+                  For example, +380 67 123 45 67 or name@mail.com
+                </p>
+                <input
+                  id="contact"
+                  name="contact"
+                  type="text"
+                  autocomplete="email"
+                  maxlength="100"
+                  required
+                  aria-describedby="contact-hint contact-error"
+                />
+                <p id="contact-error" class="field__error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="message">What would you like to order?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  maxlength="1000"
+                  placeholder="For example: honey cake, 2 kg, for Saturday at 12:00"
+                  required
+                  aria-describedby="message-error"
+                ></textarea>
+                <p id="message-error" class="field__error" hidden></p>
+              </div>
+
+              <button class="button button--primary button--large button--block" type="submit">
+                <span class="spinner" aria-hidden="true"></span>
+                <span class="button__label">Send Request</span>
+              </button>
+
+              </fieldset>
+
+              <div id="form-status" class="form-status" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="#top" aria-label="Sim Ranku — back to top">
+            <span class="logo__mark" aria-hidden="true">7</span>
+            <span class="logo__text">Sim Ranku</span>
+          </a>
+          <p>
+            A demo website for a fictional bakery-café, created as a portfolio sample.
+            Not an offer from a real business.
+          </p>
+        </div>
+        <div class="site-footer__credits">
+          <h2>Photos</h2>
+          <p>
+            Photos from
+            <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash<span class="sr-only"> (opens in a new tab)</span></a>
+            under the
+            <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License<span class="sr-only"> (opens in a new tab)</span></a>.
+            Photographers: Christopher Chung, David Todd McCarty, Kobby Mendez, David Eduardo Lopez Diaz,
+            Debbie Widjaja, Tommaso Urli, Dani, Brooke Cagle, Ines Iachelini.
+          </p>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>© <span id="year">2026</span> Sim Ranku · demo project</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+  </body>
+</html>

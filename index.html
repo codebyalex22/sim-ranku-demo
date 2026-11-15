@@ -26,6 +26,8 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Капучино з латте-артом і круасани на дерев'яному столі" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="uk" href="https://codebyalex22.github.io/sim-ranku-demo/" />
+    <link rel="alternate" hreflang="en" href="https://codebyalex22.github.io/sim-ranku-demo/en/" />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238c4220'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3E7%3C/text%3E%3C/svg%3E"
@@ -64,16 +66,6 @@
           <span class="logo__text">Сім ранку</span>
         </a>
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span class="menu-toggle__icon" aria-hidden="true"></span>
-          <span class="menu-toggle__label">Меню</span>
-        </button>
-
         <nav id="site-nav" class="site-nav" aria-label="Основна навігація">
           <ul class="site-nav__list">
             <li><a href="#menu">Асортимент</a></li>
@@ -85,6 +77,21 @@
           <a class="button button--primary site-nav__cta" href="#order">Замовити випічку</a>
           <p class="site-nav__meta">Щодня 7:00–20:00 · вул. Прикладна, 7</p>
         </nav>
+
+        <nav class="lang-switch" aria-label="Мова сайту">
+          <a href="./" lang="uk" hreflang="uk" aria-current="page"><span aria-hidden="true">UA</span><span class="sr-only">Українська</span></a>
+          <a href="en/" lang="en" hreflang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Меню</span>
+        </button>
       </div>
     </header>
 
