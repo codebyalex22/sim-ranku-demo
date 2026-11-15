@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>«Сім ранку» — пекарня-кав'ярня (демо-сайт)</title>
+    <meta
+      name="description"
+      content="Демонстраційний сайт вигаданої пекарні-кав'ярні «Сім ранку»: хліб на заквасці, випічка, кава та замовлення тортів. Зразок роботи для портфоліо."
+    />
+    <!-- Демо-сайт вигаданого бізнесу: не індексуємо, щоб не вводити в оману пошукові системи -->
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:title" content="«Сім ранку» — пекарня-кав'ярня (демо-сайт)" />
+    <meta
+      property="og:description"
+      content="Зразок односторінкового сайту для пекарні-кав'ярні: асортимент, переваги та форма замовлення."
+    />
+    <!-- Після публікації замініть на абсолютну адресу (https://домен/images/og-cover.jpg): соцмережі не читають відносні шляхи -->
+    <meta property="og:image" content="images/og-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Капучино з латте-артом і круасани на дерев'яному столі" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238c4220'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3E7%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero-coffee-croissants-1280.webp"
+      imagesrcset="images/hero-coffee-croissants-720.webp 720w, images/hero-coffee-croissants-1280.webp 1280w"
+      imagesizes="(min-width: 1024px) min(40vw, 504px), calc(100vw - 40px)"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Анімація появи вмикається, лише якщо script.js справді запустився.
+      // Якщо він не завантажився або впав, через 2 с увесь вміст показується без анімації.
+      document.documentElement.classList.add("js");
+      window.setTimeout(function () {
+        if (!document.documentElement.hasAttribute("data-ready")) {
+          document.documentElement.classList.remove("js");
+        }
+      }, 2000);
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+    <p class="demo-bar">
+      <strong>Демо-сайт для портфоліо.</strong>
+      Пекарня «Сім ранку», ціни, відгуки й контакти вигадані.
+    </p>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#top" aria-label="Сім ранку — на початок сторінки">
+          <span class="logo__mark" aria-hidden="true">7</span>
+          <span class="logo__text">Сім ранку</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Меню</span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Основна навігація">
+          <ul class="site-nav__list">
+            <li><a href="#menu">Асортимент</a></li>
+            <li><a href="#why">Чому ми</a></li>
+            <li><a href="#about">Як ми печемо</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+          <a class="button button--primary site-nav__cta" href="#order">Замовити випічку</a>
+          <p class="site-nav__meta">Щодня 7:00–20:00 · вул. Прикладна, 7</p>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow hero__eyebrow" data-intro>Пекарня-кав'ярня · щодня з 7:00</p>
+            <h1 id="hero-title" data-intro style="--delay: 80ms">
+              Хліб на заквасці й&nbsp;кава, <em>ще теплі</em> о&nbsp;сьомій ранку
+            </h1>
+            <p class="hero__lead" data-intro style="--delay: 160ms">
+              Печемо невеликими партіями з борошна українських млинів, без маргарину й
+              покращувачів. Заходьте на сніданок або замовте торт і сет випічки за 24 години.
+            </p>
+            <div class="hero__actions" data-intro style="--delay: 240ms">
+              <a class="button button--primary button--large" href="#order">
+                Замовити випічку
+                <span class="button__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="button button--ghost button--large" href="#menu">Переглянути асортимент</a>
+            </div>
+            <ul class="hero__points" data-intro style="--delay: 320ms">
+              <li><strong>24 год</strong> ферментації тіста</li>
+              <li><strong>0 г</strong> маргарину</li>
+              <li><strong>від 24 год</strong> на торт</li>
+            </ul>
+          </div>
+
+          <div class="hero__media" data-intro="fade" style="--delay: 120ms">
+            <img
+              class="hero__image"
+              src="images/hero-coffee-croissants-1280.webp"
+              srcset="images/hero-coffee-croissants-720.webp 720w, images/hero-coffee-croissants-1280.webp 1280w"
+              sizes="(min-width: 1024px) min(40vw, 504px), calc(100vw - 40px)"
+              width="1280"
+              height="1530"
+              alt="Капучино з латте-артом поруч із круасанами та шоколадною випічкою"
+              fetchpriority="high"
+            />
+            <div class="hero__badge">
+              <span class="hero__badge-dot" aria-hidden="true"></span>
+              <span>
+                <strong>Сьогодні з печі</strong>
+                пшеничний на заквасці, круасани, булочки з корицею
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="section__header section__header--split">
+            <div>
+              <p class="eyebrow">Асортимент</p>
+              <h2 id="menu-title">Що чекає на вітрині щоранку</h2>
+            </div>
+            <p class="section__lead">
+              Шість позицій, за якими до нас повертаються. Ціни вказані для прикладу.
+            </p>
+          </div>
+
+          <ul class="products">
+            <li class="product" data-reveal>
+              <div class="product__media">
+                <img src="images/sourdough-loaf.webp" width="800" height="600" loading="lazy" decoding="async" alt="Круглий хліб на заквасці з хрусткою скоринкою на дерев'яній дошці" />
+                <span class="product__tag">Хіт</span>
+              </div>
+              <div class="product__body">
+                <h3>Пшеничний на заквасці</h3>
+                <p>Хрустка скоринка, ніжний пористий м'якуш, легка кислинка.</p>
+                <p class="product__meta"><span>750 г</span><span class="price">85 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 80ms">
+              <div class="product__media">
+                <img src="images/croissants.webp" width="800" height="600" loading="lazy" decoding="async" alt="Два шаруватих круасани на темній тарілці" />
+              </div>
+              <div class="product__body">
+                <h3>Круасан на вершковому маслі</h3>
+                <p>27 шарів тіста, масло 82%. Найкращий — до 10:00, поки ще теплий.</p>
+                <p class="product__meta"><span>90 г</span><span class="price">65 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 160ms">
+              <div class="product__media">
+                <img src="images/cinnamon-rolls.webp" width="800" height="600" loading="lazy" decoding="async" alt="Три булочки з корицею, одна з них під вершковою глазур'ю" />
+                <span class="product__tag">Новинка</span>
+              </div>
+              <div class="product__body">
+                <h3>Булочка з корицею</h3>
+                <p>Здобне тісто й цейлонська кориця. Можна з вершковою глазур'ю або без неї.</p>
+                <p class="product__meta"><span>130 г</span><span class="price">75 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal>
+              <div class="product__media">
+                <img src="images/rye-bread-sliced.webp" width="800" height="600" loading="lazy" decoding="async" alt="Нарізаний сільський хліб зі світлим пористим м'якушем на дерев'яній дошці" />
+              </div>
+              <div class="product__body">
+                <h3>Сільський пшенично-житній</h3>
+                <p>Світлий пористий м'якуш і 15% житнього борошна. Зберігає свіжість до трьох днів.</p>
+                <p class="product__meta"><span>700 г</span><span class="price">90 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 80ms">
+              <div class="product__media">
+                <img src="images/baguettes.webp" width="800" height="600" loading="lazy" decoding="async" alt="Два рум'яних багети з надрізами, присипані борошном, на дерев'яній дошці" />
+              </div>
+              <div class="product__body">
+                <h3>Багет класичний</h3>
+                <p>Довга холодна ферментація для глибокого смаку й тонкої хрусткої скоринки.</p>
+                <p class="product__meta"><span>250 г</span><span class="price">45 ₴</span></p>
+              </div>
+            </li>
+            <li class="product" data-reveal style="--delay: 160ms">
+              <div class="product__media">
+                <img src="images/cappuccino.webp" width="800" height="600" loading="lazy" decoding="async" alt="Капучино з латте-артом у білій чашці на темному столі" />
+              </div>
+              <div class="product__body">
+                <h3>Капучино</h3>
+                <p>Еспресо зі спешелті-зерна середнього обсмаження та молоко 3,2%.</p>
+                <p class="product__meta"><span>250 мл</span><span class="price">65 ₴</span></p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="menu-extra" data-reveal>
+            <h3>Також щодня</h3>
+            <ul class="menu-extra__list">
+              <li><span>Еспресо</span><span class="price">45 ₴</span></li>
+              <li><span>Фільтр-кава дня</span><span class="price">60 ₴</span></li>
+              <li><span>Флет вайт</span><span class="price">70 ₴</span></li>
+              <li><span>Пиріг дня, шматок</span><span class="price">80 ₴</span></li>
+              <li><span>Круасан із мигдалем</span><span class="price">85 ₴</span></li>
+              <li><span>Чіабата</span><span class="price">50 ₴</span></li>
+            </ul>
+          </div>
+
+          <div class="order-strip" data-reveal>
+            <div>
+              <h3>Торти й кейтеринг на замовлення</h3>
+              <p>Торти від 1,5 кг, сети випічки для кава-брейків і свят. Доставка по району.</p>
+            </div>
+            <a class="button button--light" href="#order">
+              Обговорити замовлення
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section section--alt" aria-labelledby="why-title">
+        <div class="container why">
+          <figure class="why__media" data-reveal="fade">
+            <img src="images/barista-latte-art.webp" width="700" height="875" loading="lazy" decoding="async" alt="Бариста наливає молоко в чашку, малюючи латте-арт" />
+          </figure>
+          <div>
+            <div class="section__header">
+              <p class="eyebrow">Чому ми</p>
+              <h2 id="why-title">Три правила, яких тримаємося щодня</h2>
+            </div>
+            <ol class="benefits">
+              <li class="benefit" data-reveal>
+                <h3>Тісто зріє 24 години</h3>
+                <p>Довга ферментація на живій заквасці робить хліб ароматним і легшим для травлення.</p>
+              </li>
+              <li class="benefit" data-reveal style="--delay: 80ms">
+                <h3>Лише натуральні інгредієнти</h3>
+                <p>Вершкове масло 82%, борошно від фермерських млинів, сезонні ягоди. Склад підкажемо на касі.</p>
+              </li>
+              <li class="benefit" data-reveal style="--delay: 160ms">
+                <h3>Замовлення без зайвих кроків</h3>
+                <p>Залиште заявку — уточнимо деталі в месенджері й підготуємо до потрібного часу.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container about">
+          <div class="about__text">
+            <p class="eyebrow">Як ми печемо</p>
+            <h2 id="about-title">Поки місто спить, у нас уже гаряча піч</h2>
+            <p>
+              Маленька пекарня, де тісто ліплять руками, а вітрину оновлюють кілька разів на
+              день. Ми печемо невеликими партіями, щоб ви купували свіжий хліб, а не вчорашні
+              залишки.
+            </p>
+            <ol class="timeline">
+              <li><time>22:00</time><span>Замішуємо тісто на заквасці</span></li>
+              <li><time>04:00</time><span>Формуємо хліб і круасани</span></li>
+              <li><time>06:30</time><span>Перша партія виходить із печі</span></li>
+              <li><time>07:00</time><span>Відчиняємо двері й варимо каву</span></li>
+            </ol>
+          </div>
+          <figure class="about__media" data-reveal="fade">
+            <img src="images/bakery-shelves.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Полиці з плетеними кошиками, повними свіжого хліба й булочок" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="reviews" class="section section--alt" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section__header section__header--split">
+            <div>
+              <p class="eyebrow">Відгуки</p>
+              <h2 id="reviews-title">Що кажуть гості</h2>
+            </div>
+            <p class="section__lead demo-note">
+              <span class="demo-label">Демо</span>
+              Приклади відгуків для макета. Замініть їх реальними відгуками з дозволу авторів.
+            </p>
+          </div>
+
+          <div class="reviews">
+            <figure class="review review--featured" data-reveal>
+              <blockquote>
+                <p>«Сільський хліб не черствіє навіть на третій день. Тепер беремо його щотижня.»</p>
+              </blockquote>
+              <figcaption>Приклад відгуку · постійний гість</figcaption>
+            </figure>
+            <figure class="review" data-reveal style="--delay: 80ms">
+              <blockquote>
+                <p>«Замовляли сет випічки на кава-брейк для команди — усе привезли вчасно.»</p>
+              </blockquote>
+              <figcaption>Приклад відгуку · корпоративне замовлення</figcaption>
+            </figure>
+            <figure class="review" data-reveal style="--delay: 160ms">
+              <blockquote>
+                <p>«Круасани хрусткі, а капучино без гіркоти. Ідеальний сніданок дорогою на роботу.»</p>
+              </blockquote>
+              <figcaption>Приклад відгуку · гість кав'ярні</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section" aria-labelledby="contacts-title">
+        <div class="container contact">
+          <div class="contact__details">
+            <p class="eyebrow">Контакти</p>
+            <h2 id="contacts-title">Замовте торт або випічку заздалегідь</h2>
+            <p>
+              Залиште заявку — відповімо протягом робочого дня. Для термінових замовлень
+              зателефонуйте.
+            </p>
+            <p class="demo-note">
+              <span class="demo-label">Демо</span>
+              Контакти нижче — заглушки, вони не ведуть до реального бізнесу.
+            </p>
+            <dl class="contact-list">
+              <div>
+                <dt>Телефон</dt>
+                <dd><a href="tel:+380000000000">+380 00 000 00 00</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+              </div>
+              <div>
+                <dt>Адреса</dt>
+                <dd>вул. Прикладна, 7</dd>
+              </div>
+              <div>
+                <dt>Години роботи</dt>
+                <dd>Щодня 7:00–20:00</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div id="order" class="form-panel" tabindex="-1" data-reveal>
+            <h3 id="form-title">Заявка на замовлення</h3>
+            <p class="form-panel__hint">Усі поля обов'язкові.</p>
+            <p class="demo-note form-panel__demo">
+              <span class="demo-label">Демо</span>
+              Форма лише перевіряє заповнення. Реальне надсилання не підключене, дані нікуди не передаються.
+            </p>
+
+            <!--
+              data-endpoint: URL серверного обробника форми (POST, JSON).
+              Поки він порожній, форма працює в демо-режимі й нічого не надсилає.
+              Поля вимкнені в HTML і вмикаються з script.js, тому без JavaScript
+              форму неможливо відправити (і дані не потраплять в адресу сторінки).
+            -->
+            <form
+              id="contact-form"
+              class="contact-form"
+              aria-labelledby="form-title"
+              method="post"
+              action="#order"
+              data-endpoint=""
+              novalidate
+            >
+              <noscript>
+                <p class="form-status form-status--info">
+                  Це демонстраційний сайт: реальні заявки тут не надсилаються. Без JavaScript форма вимкнена, а з ним лише перевіряє заповнення полів.
+                </p>
+              </noscript>
+              <fieldset class="contact-form__fields" disabled>
+                <legend class="sr-only">Дані заявки</legend>
+              <div class="field">
+                <label for="name">Ваше ім'я</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="60"
+                  required
+                  aria-describedby="name-error"
+                />
+                <p id="name-error" class="field__error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="contact">Телефон або email</label>
+                <p id="contact-hint" class="field__hint">
+                  Наприклад, +380 67 123 45 67 або name@mail.com
+                </p>
+                <input
+                  id="contact"
+                  name="contact"
+                  type="text"
+                  autocomplete="email"
+                  maxlength="100"
+                  required
+                  aria-describedby="contact-hint contact-error"
+                />
+                <p id="contact-error" class="field__error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="message">Що бажаєте замовити</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  maxlength="1000"
+                  placeholder="Наприклад: медовик 2 кг на суботу, 12:00"
+                  required
+                  aria-describedby="message-error"
+                ></textarea>
+                <p id="message-error" class="field__error" hidden></p>
+              </div>
+
+              <button class="button button--primary button--large button--block" type="submit">
+                <span class="spinner" aria-hidden="true"></span>
+                <span class="button__label">Надіслати заявку</span>
+              </button>
+
+              </fieldset>
+
+              <div id="form-status" class="form-status" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="#top" aria-label="Сім ранку — на початок сторінки">
+            <span class="logo__mark" aria-hidden="true">7</span>
+            <span class="logo__text">Сім ранку</span>
+          </a>
+          <p>
+            Демонстраційний сайт вигаданої пекарні-кав'ярні, створений як зразок роботи для
+            портфоліо. Не є пропозицією реального бізнесу.
+          </p>
+        </div>
+        <div class="site-footer__credits">
+          <h2>Фото</h2>
+          <p>
+            Фотографії з
+            <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash<span class="sr-only"> (у новій вкладці)</span></a>
+            за
+            <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License<span class="sr-only"> (у новій вкладці)</span></a>.
+            Автори: Christopher Chung, David Todd McCarty, Kobby Mendez, David Eduardo Lopez Diaz,
+            Debbie Widjaja, Tommaso Urli, Dani, Brooke Cagle, Ines Iachelini.
+          </p>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>© <span id="year">2026</span> «Сім ранку» · демо-проєкт</p>
+        <a href="#top">Нагору ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
